@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈静怡，生日快乐！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF69B4',
+                        secondary: '#9D84B7',
+                        accent: '#FFB6C1',
+                        light: '#FFF0F5',
+                        dark: '#4A2545',
+                    },
+                    fontFamily: {
+                        cursive: ['Dancing Script', 'cursive'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .animate-float-delay-1 {
+                animation: float 6s ease-in-out 1s infinite;
+            }
+            .animate-float-delay-2 {
+                animation: float 6s ease-in-out 2s infinite;
+            }
+            .animate-float-delay-3 {
+                animation: float 6s ease-in-out 3s infinite;
+            }
+            .animate-float-delay-4 {
+                animation: float 6s ease-in-out 4s infinite;
+            }
+            .animate-float-delay-5 {
+                animation: float 6s ease-in-out 5s infinite;
+            }
+            .animate-sparkle {
+                animation: sparkle 2s ease-in-out infinite;
+            }
+            .animate-sparkle-delay-1 {
+                animation: sparkle 2s ease-in-out 0.5s infinite;
+            }
+            .animate-sparkle-delay-2 {
+                animation: sparkle 2s ease-in-out 1s infinite;
+            }
+            .animate-sparkle-delay-3 {
+                animation: sparkle 2s ease-in-out 1.5s infinite;
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-light to-white min-h-screen overflow-x-hidden">
+    <!-- 背景音乐 -->
+    <!-- 注意：将你的背景音乐文件命名为 birthday.mp3 并放在与HTML文件相同的目录下 -->
+    <!-- 或者修改下面的 src 属性指向你的音乐文件路径 -->
+    <audio id="bgMusic" loop>
+        <source src="/CJYSRKL/cjy.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="fixed top-4 right-4 z-50">
+        <button id="musicToggle" class="bg-primary hover:bg-primary/80 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fa fa-music"></i>
+        </button>
+    </div>
+
+    <!-- 装饰星星 -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-[10%] left-[15%] text-primary text-4xl animate-sparkle"><i class="fa fa-star"></i></div>
+        <div class="absolute top-[20%] right-[20%] text-secondary text-3xl animate-sparkle-delay-1"><i class="fa fa-star"></i></div>
+        <div class="absolute top-[40%] left-[10%] text-accent text-2xl animate-sparkle-delay-2"><i class="fa fa-star"></i></div>
+        <div class="absolute top-[60%] right-[15%] text-primary text-3xl animate-sparkle-delay-3"><i class="fa fa-star"></i></div>
+        <div class="absolute top-[80%] left-[25%] text-secondary text-2xl animate-sparkle"><i class="fa fa-star"></i></div>
+    </div>
+
+    <!-- 主内容 -->
+    <main class="relative z-10 container mx-auto px-4 py-12">
+        <!-- 生日标题 -->
+        <section class="text-center mb-20 pt-10">
+            <div class="relative inline-block">
+                <h1 class="text-[clamp(2.5rem,6vw,5rem)] font-cursive font-bold text-primary mb-4 text-shadow">
+                    生日快乐，陈静怡！
+                </h1>
+                <div class="absolute -top-10 -left-10 text-primary/70 text-4xl animate-float"><i class="fa fa-heart"></i></div>
+                <div class="absolute -top-5 -right-10 text-secondary/70 text-4xl animate-float-delay-2"><i class="fa fa-gift"></i></div>
+                <div class="absolute -bottom-5 -left-10 text-accent/70 text-4xl animate-float-delay-3"><i class="fa fa-birthday-cake"></i></div>
+                <div class="absolute -bottom-10 -right-10 text-primary/70 text-4xl animate-float-delay-1"><i class="fa fa-star"></i></div>
+            </div>
+            <p class="text-[clamp(1.2rem,3vw,1.8rem)] text-dark/80 mt-6 max-w-3xl mx-auto">
+                今天是属于你的特别日子，愿你的每一天都充满爱与欢乐！
+            </p>
+        </section>
+
+        <!-- 照片区域 -->
+        <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://picsum.photos/seed/jingyi1/600/400" alt="陈静怡照片1" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-2">美好的回忆</h3>
+                        <p class="text-dark/70">每一张照片都承载着我们共同的美好回忆，愿未来有更多精彩瞬间。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://picsum.photos/seed/jingyi2/600/400" alt="陈静怡照片2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-2">珍贵时刻</h3>
+                        <p class="text-dark/70">时间过得真快，但这些珍贵的时刻永远留在我们心中。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <img src="https://picsum.photos/seed/jingyi3/600/400" alt="陈静怡照片3" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-2">生日快乐</h3>
+                        <p class="text-dark/70">在这个特别的日子里，愿你的梦想都能成真，幸福永远伴随你。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 祝福卡片 -->
+        <section class="mb-20">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-cursive font-bold text-secondary text-center mb-10">
+                满满的祝福
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 shadow-lg transform transition-all duration-500 hover:shadow-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-primary/20 p-3 rounded-full mr-4">
+                            <i class="fa fa-heart text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark">青春永驻</h3>
+                            <p class="text-dark/70">愿你的青春永远美丽，笑容永远灿烂，生活永远充满阳光！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 shadow-lg transform transition-all duration-500 hover:shadow-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                            <i class="fa fa-star text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark">梦想成真</h3>
+                            <p class="text-dark/70">愿你所有的梦想都能成真，所有的努力都能得到回报，未来充满无限可能！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 shadow-lg transform transition-all duration-500 hover:shadow-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-accent/20 p-3 rounded-full mr-4">
+                            <i class="fa fa-gift text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark">幸福美满</h3>
+                            <p class="text-dark/70">愿你的生活充满爱与欢笑，家庭美满，事业有成，一切顺心如意！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 shadow-lg transform transition-all duration-500 hover:shadow-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-dark/20 p-3 rounded-full mr-4">
+                            <i class="fa fa-smile-o text-dark text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark">健康快乐</h3>
+                            <p class="text-dark/70">愿你身体健康，心情愉悦，每一天都充满活力和快乐！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更多祝福 -->
+        <section class="mb-20">
+            <div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-cursive font-bold text-dark text-center mb-8">
+                    来自心底的祝福
+                </h2>
+                <div class="space-y-6">
+                    <p class="text-lg md:text-xl text-dark/80 text-center">
+                        亲爱的陈静怡，在你生日的这一天，愿你的生活如诗如画，每一天都充满阳光和欢笑。
+                    </p>
+                    <p class="text-lg md:text-xl text-dark/80 text-center">
+                        愿你的未来充满无限可能，每一个梦想都能成真，每一份努力都能收获美好。
+                    </p>
+                    <p class="text-lg md:text-xl text-dark/80 text-center">
+                        希望你知道，你是一个特别的人，你的存在让这个世界变得更加美好。
+                    </p>
+                    <p class="text-lg md:text-xl text-dark/80 text-center">
+                        愿你的生日充满爱与惊喜，新的一岁里，身体健康，事业顺利，爱情美满！
+                    </p>
+                    <p class="text-lg md:text-xl font-bold text-primary text-center">
+                        生日快乐，陈静怡！永远年轻美丽，幸福快乐！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生日蛋糕 -->
+        <section class="mb-20 text-center">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-cursive font-bold text-secondary mb-10">
+                生日快乐！
+            </h2>
+            <div class="relative inline-block">
+                <!-- 蛋糕SVG -->
+                <svg viewBox="0 0 300 300" class="w-64 h-64 mx-auto">
+                    <!-- 蜡烛 -->
+                    <g transform="translate(150, 70)">
+                        <rect x="-5" y="-40" width="10" height="40" fill="#FF69B4" />
+                        <circle cx="0" cy="-40" r="5" fill="#FF69B4" />
+                        <path d="M0,-40 Q5,-50 0,-60 Q-5,-50 0,-40" fill="#FFD700" class="animate-sparkle" />
+                    </g>
+                    
+                    <!-- 顶层蛋糕 -->
+                    <ellipse cx="150" cy="110" rx="50" ry="15" fill="#F5DEB3" />
+                    <rect x="100" y="110" width="100" height="30" fill="#F5DEB3" />
+                    <ellipse cx="150" cy="140" rx="50" ry="15" fill="#F5DEB3" />
+                    
+                    <!-- 中层蛋糕 -->
+                    <ellipse cx="150" cy="155" rx="60" ry="15" fill="#CD853F" />
+                    <rect x="90" y="155" width="120" height="30" fill="#CD853F" />
+                    <ellipse cx="150" cy="185" rx="60" ry="15" fill="#CD853F" />
+                    
+                    <!-- 底层蛋糕 -->
+                    <ellipse cx="150" cy="200" rx="70" ry="15" fill="#8B4513" />
+                    <rect x="80" y="200" width="140" height="40" fill="#8B4513" />
+                    <ellipse cx="150" cy="240" rx="70" ry="15" fill="#8B4513" />
+                    
+                    <!-- 糖霜 -->
+                    <path d="M100,110 Q125,95 150,110 Q175,95 200,110" fill="#FFE4E1" />
+                </svg>
+                
+                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <p class="text-2xl font-bold text-dark">🎂</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 气球装饰 -->
+        <div class="fixed inset-0 pointer-events-none z-0 opacity-60">
+            <div class="absolute top-[5%] left-[5%] text-5xl text-primary animate-float"><i class="fa fa-balloon"></i></div>
+            <div class="absolute top-[15%] right-[10%] text-4xl text-secondary animate-float-delay-2"><i class="fa fa-balloon"></i></div>
+            <div class="absolute top-[30%] left-[15%] text-5xl text-accent animate-float-delay-4"><i class="fa fa-balloon"></i></div>
+            <div class="absolute top-[40%] right-[5%] text-4xl text-primary animate-float-delay-1"><i class="fa fa-balloon"></i></div>
+            <div class="absolute top-[60%] left-[10%] text-5xl text-secondary animate-float-delay-3"><i class="fa fa-balloon"></i></div>
+            <div class="absolute top-[70%] right-[15%] text-4xl text-accent animate-float-delay-5"><i class="fa fa-balloon"></i></div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">陈静怡，祝你生日快乐！🎂🎉</p>
+            <p class="mt-2 text-white/70">愿你的每一天都充满爱与幸福</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                    <i class="fa fa-heart text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                    <i class="fa fa-gift text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-primary transition-colors duration-300">
+                    <i class="fa fa-star text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 背景音乐控制
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isMusicPlaying = false;
+
+        // 播放/暂停背景音乐
+        musicToggle.addEventListener('click', function() {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicToggle.innerHTML = '<i class="fa fa-music"></i>';
+            } else {
+                bgMusic.play().catch(e => {
+                    console.log('背景音乐播放失败:', e);
+                    alert('由于浏览器限制，需要您先与页面交互才能播放音乐。请点击页面任意位置后再试。');
+                });
+                musicToggle.innerHTML = '<i class="fa fa-pause"></i>';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        });
+
+        // 页面加载完成后，提示用户点击播放音乐
+        document.addEventListener('click', function initMusicPlay() {
+            if (!isMusicPlaying) {
+                bgMusic.play().catch(e => console.log('首次播放尝试失败:', e));
+                isMusicPlaying = true;
+                musicToggle.innerHTML = '<i class="fa fa-pause"></i>';
+            }
+            document.removeEventListener('click', initMusicPlay);
+        });
+
+        // 气球漂浮动画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 创建更多气球
+            const balloonContainer = document.querySelector('.fixed.inset-0.pointer-events-none.z-0.opacity-60');
+            const balloonColors = ['text-primary', 'text-secondary', 'text-accent'];
+            const balloonSizes = ['text-4xl', 'text-5xl', 'text-6xl'];
+            const floatDelays = ['animate-float-delay-1', 'animate-float-delay-2', 'animate-float-delay-3', 'animate-float-delay-4', 'animate-float-delay-5'];
+            
+            for (let i = 0; i < 10; i++) {
+                const balloon = document.createElement('div');
+                const top = Math.floor(Math.random() * 80) + 5;
+                const left = Math.floor(Math.random() * 80) + 5;
+                const color = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+                const size = balloonSizes[Math.floor(Math.random() * balloonSizes.length)];
+                const delay = floatDelays[Math.floor(Math.random() * floatDelays.length)];
+                
+                balloon.className = `absolute top-[${top}%] left-[${left}%] ${size} ${color} animate-float ${delay}`;
+                balloon.innerHTML = '<i class="fa fa-balloon"></i>';
+                balloonContainer.appendChild(balloon);
+            }
+        });
+    </script>
+</body>
+</html>
+    
